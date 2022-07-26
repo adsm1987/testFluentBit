@@ -41,22 +41,6 @@ https://helm.sh/docs/intro/install/
 
 https://minikube.sigs.k8s.io/docs/start/
 
-## Install helm chart fluent-bit
-
-Install the chart in the namespace *logs*
-
-https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
-
-`helm install fluent-bit fluent/fluent-bit -n logs -f values.yaml`
-
-## Uninstall helm chart fluent-bit
-
-Uninstall the chart in the namespace *logs*
-
-https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
-
-`helm uninstall fluent-bit fluent/fluent-bit -n logs -f values.yaml`
-
 ## Understanding fluent-bit input, output, filter and parser
 
 We will need to use [this](https://docs.fluentbit.io/manual/pipeline/inputs) to control the specific service that we want to export the logs. We will be able to put in *output* the log analytics workspace service to gather the logs like referred [here](https://docs.fluentbit.io/manual/pipeline/outputs/azure).
@@ -121,4 +105,20 @@ config:
         Time_Format %Y-%m-%dT%H:%M:%S.%L
 ```
 
+# Usage
 
+##  Helm chart of fluent-bit
+
+https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
+
+## Run and install helm chart fluent-bit
+
+Install the chart in the namespace *logs*
+
+`helm install fluent-bit fluent/fluent-bit -n logs -f values.yaml`
+
+## Uninstall helm chart fluent-bit
+
+Uninstall the chart in the namespace *logs*
+
+`helm uninstall fluent-bit fluent/fluent-bit -n logs -f values.yaml`
