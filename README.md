@@ -43,11 +43,15 @@ https://minikube.sigs.k8s.io/docs/start/
 
 ## Install helm chart fluent-bit
 
+Install the chart in the namespace *logs*
+
 https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
 
 `helm install fluent-bit fluent/fluent-bit -n logs -f values.yaml`
 
 ## Uninstall helm chart fluent-bit
+
+Uninstall the chart in the namespace *logs*
 
 https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
 
