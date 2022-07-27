@@ -290,21 +290,18 @@ config:
   inputs: |
     [INPUT]
         Name tail
-        Tag  kube.*
-        Path /var/log/containers/*.log
-        Exclude_Path /var/log/containers/*_kube-system_*.log, /var/log/containers/*_logs_*.log
-        Parser docker
-        Mem_Buf_Limit     5MB
-        Skip_Long_Lines   On
+        Path /var/log/containers/nginx*.log
+        multiline.parser docker, cri
+        Read_from_Head True
         Refresh_Interval  10
   ## https://docs.fluentbit.io/manual/pipeline/filters
   filters: |
     [FILTER]
         Name kubernetes
-        Match kube.*
+        Match *
         Merge_Log Off
-        Keep_Log On
-        K8S-Logging.Exclude On
+        Keep_Log Off
+        K8S-Logging.Exclude Off
   ## https://docs.fluentbit.io/manual/pipeline/outputs
   outputs: |
     [OUTPUT]
@@ -313,7 +310,7 @@ config:
   ## https://docs.fluentbit.io/manual/pipeline/parsers
   customParsers: |
     [PARSER]
-        Name docker
+        Name docker_no_time
         Format json
         Time_Keep Off
         Time_Key time
