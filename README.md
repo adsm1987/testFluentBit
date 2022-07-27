@@ -113,6 +113,8 @@ https://github.com/fluent/helm-charts/tree/main/charts/fluent-bit
 
 ## Run and install helm chart fluent-bit
 
+`helm repo add fluent https://fluent.github.io/helm-charts`
+
 Install the chart in the namespace *logs*
 
 `helm install fluent-bit fluent/fluent-bit -n logs -f values.yaml`
