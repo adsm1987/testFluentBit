@@ -290,15 +290,17 @@ config:
   inputs: |
     [INPUT]
         Name tail
-        Path /var/log/containers/nginx*.log
+        Tag  kube.*
+        Path /var/log/containers/falco*.log
         multiline.parser docker, cri
-        Read_from_Head True
+        Mem_Buf_Limit     5MB
+        Skip_Long_Lines   On
         Refresh_Interval  10
   ## https://docs.fluentbit.io/manual/pipeline/filters
   filters: |
     [FILTER]
         Name kubernetes
-        Match *
+        Match kube.*
         Merge_Log Off
         Keep_Log Off
         K8S-Logging.Exclude Off
