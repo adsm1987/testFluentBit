@@ -14,7 +14,7 @@ https://helm.sh/docs/chart_template_guide/values_files/
 
 ## Kubernetes cluster
 
-https://kubernetes.io/docs/tutorials/hello-minikube/
+[Setup AKS k8s cluster](https://docs.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-cli)
 
 ## Fluent-bit
 
@@ -36,10 +36,6 @@ https://logz.io/blog/fluentd-vs-fluent-bit/
 ## Install helm
 
 https://helm.sh/docs/intro/install/
-
-## Install minikube
-
-https://minikube.sigs.k8s.io/docs/start/
 
 ## Understanding fluent-bit input, output, filter and parser
 
