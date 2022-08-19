@@ -307,8 +307,11 @@ config:
   ## https://docs.fluentbit.io/manual/pipeline/outputs
   outputs: |
     [OUTPUT]
-        Name stdout
+        Name azure
         Match *
+        Customer_ID ${WorkspaceId}
+        Shared_Key  ${SharedKey}
+        Log_Type    falco
   ## https://docs.fluentbit.io/manual/pipeline/parsers
   customParsers: |
     [PARSER]
