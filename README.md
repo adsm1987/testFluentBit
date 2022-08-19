@@ -37,7 +37,7 @@ https://logz.io/blog/fluentd-vs-fluent-bit/
 
 https://helm.sh/docs/intro/install/
 
-## Understanding fluent-bit input, output, filter and parser
+## Understanding fluent-bit
 
 We will need to use [this](https://docs.fluentbit.io/manual/pipeline/inputs) to control the specific service that we want to export the logs. We will be able to put in *output* the log analytics workspace service to gather the logs like referred [here](https://docs.fluentbit.io/manual/pipeline/outputs/azure).
 
