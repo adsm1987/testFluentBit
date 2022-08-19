@@ -89,7 +89,7 @@ config:
         Match kube.*
         Merge_Log Off
         Keep_Log On
-        K8S-Logging.Exclude On
+        K8S-Logging.Exclude Off
   ## https://docs.fluentbit.io/manual/pipeline/outputs
   outputs: |
     [OUTPUT]
